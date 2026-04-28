@@ -182,57 +182,63 @@ export function MarketingShell({ children }: { children: ReactNode }) {
 export function MarketingHomePage() {
   return (
     <MarketingPageMain>
-      <section className="relative mx-auto grid max-w-[1280px] overflow-hidden px-4 pt-8 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:items-center lg:px-12">
-        <div className="relative z-10 max-w-3xl py-10">
-          <MarketingEyebrow>{websiteContent.home.eyebrow}</MarketingEyebrow>
-          <h1 className="mt-7 font-heading text-6xl leading-14 font-black text-balance uppercase sm:text-7xl lg:text-6xl">
-            <span className="block text-(--marketing-gold-strong)">Sweet Treats,</span>
-            <span className="block text-(--marketing-sky)">Made Your Way</span>
-          </h1>
-          <p className="mt-1 font-(family-name:--font-script) text-3xl leading-none font-normal text-(--marketing-ink) sm:text-4xl">
-            Dips and Drizzles Chx
-          </p>
-          <p className="pt-6 text-lg max-w-xl text-balance text-foreground sm:text-xl">
-            Custom-dipped treats with colors, drizzles and sprinkles to match any celebration.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <MarketingButtonLink href="/menu" showIcon={false}>
-              View Menu
-            </MarketingButtonLink>
-            <MarketingButtonLink href="/contact" showIcon={false} tone="secondary">
-              Order Now
-            </MarketingButtonLink>
+      <section className="relative min-h-[640px] overflow-hidden pt-8 lg:min-h-[700px]">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-12">
+          <div className="relative z-10 max-w-3xl py-10 lg:py-16">
+            <MarketingEyebrow>{websiteContent.home.eyebrow}</MarketingEyebrow>
+            <h1 className="mt-7 font-heading text-6xl leading-14 font-black text-balance uppercase sm:text-7xl lg:text-6xl">
+              <span className="block text-(--marketing-gold-strong)">Sweet Treats,</span>
+              <span className="block text-(--marketing-sky)">Made Your Way</span>
+            </h1>
+            <p className="mt-1 font-(family-name:--font-script) text-3xl leading-none font-normal text-(--marketing-ink) sm:text-4xl">
+              Dips and Drizzles Chx
+            </p>
+            <p className="pt-6 text-lg max-w-xl text-balance text-foreground sm:text-xl">
+              Custom-dipped treats with colors, drizzles and sprinkles to match any celebration.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <MarketingButtonLink href="/menu" showIcon={false}>
+                View Menu
+              </MarketingButtonLink>
+              <MarketingButtonLink href="/contact" showIcon={false} tone="secondary">
+                Order Now
+              </MarketingButtonLink>
+            </div>
+            <div className="mt-10 grid max-w-2xl gap-5 text-[0.7rem] font-black uppercase leading-4 tracking-[0.08em] sm:grid-cols-3">
+              <SweetFeature icon={<Heart className="size-9" />} label="Made with love" />
+              <SweetFeature
+                icon={<Palette className="size-9" />}
+                label="Custom colors & designs"
+              />
+              <SweetFeature
+                icon={<PartyPopper className="size-9" />}
+                label="Perfect for celebrations"
+              />
+            </div>
           </div>
-          <div className="mt-10 grid max-w-2xl gap-5 text-[0.7rem] font-black uppercase leading-4 tracking-[0.08em] sm:grid-cols-3">
-            <SweetFeature icon={<Heart className="size-9" />} label="Made with love" />
-            <SweetFeature icon={<Palette className="size-9" />} label="Custom colors & designs" />
-            <SweetFeature
-              icon={<PartyPopper className="size-9" />}
-              label="Perfect for celebrations"
+
+          <div className="relative mt-4 block overflow-hidden lg:hidden">
+            <Image
+              priority
+              alt="Pastel custom cake pops with pink and lavender drizzle"
+              className="relative left-1/2 h-auto w-[118%] max-w-none -translate-x-1/2 drop-shadow-[0_20px_34px_rgba(173,118,198,0.2)]"
+              src="/marketing/dips-drizzles/hero-cake-pops-cluster.png"
+              width={1693}
+              height={929}
+              sizes="100vw"
             />
           </div>
         </div>
 
-        <div className="pointer-events-none relative hidden items-center justify-center lg:flex">
+        <div className="pointer-events-none absolute top-8 right-0 z-0 hidden w-[min(56vw,1040px)] lg:block">
           <Image
             priority
             alt="Pastel custom cake pops with pink and lavender drizzle"
-            className="h-auto w-[132%] max-w-none drop-shadow-[0_28px_42px_rgba(173,118,198,0.24)]"
+            className="h-auto w-full max-w-none drop-shadow-[0_30px_48px_rgba(173,118,198,0.24)]"
             src="/marketing/dips-drizzles/hero-cake-pops-cluster.png"
             width={1693}
             height={929}
-            sizes="58vw"
-          />
-        </div>
-        <div className="relative mt-4 block overflow-hidden lg:hidden">
-          <Image
-            priority
-            alt="Pastel custom cake pops with pink and lavender drizzle"
-            className="mx-auto h-auto w-[112%] max-w-none drop-shadow-[0_20px_34px_rgba(173,118,198,0.2)]"
-            src="/marketing/dips-drizzles/hero-cake-pops-cluster.png"
-            width={1693}
-            height={929}
-            sizes="100vw"
+            sizes="(min-width: 1024px) 58vw, 100vw"
           />
         </div>
       </section>
