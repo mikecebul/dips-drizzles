@@ -327,14 +327,16 @@ export function MarketingHomePage() {
                   <li key={line}>{line}</li>
                 ))}
               </ul>
-              <MarketingButtonLink
-                className="mt-auto h-10 min-w-36 border-(--marketing-gold-strong) px-4 text-xs"
-                href="/contact"
-                showIcon={false}
-                tone="secondary"
-              >
-                {partyPackage.name === 'Custom Orders' ? 'Contact Us' : 'Learn More'}
-              </MarketingButtonLink>
+              <div className="mt-auto pt-5">
+                <MarketingButtonLink
+                  className="h-10 min-w-36 border-(--marketing-gold-strong) px-4 text-xs"
+                  href="/contact"
+                  showIcon={false}
+                  tone="secondary"
+                >
+                  {partyPackage.name === 'Custom Orders' ? 'Contact Us' : 'Learn More'}
+                </MarketingButtonLink>
+              </div>
             </article>
           ))}
         </div>
