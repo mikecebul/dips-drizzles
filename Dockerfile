@@ -1,5 +1,5 @@
-# Use Node.js 20-alpine for compatibility with tsx and your engines field
-FROM node:20-alpine AS base
+# Use Node.js 24-alpine for compatibility with your engines field
+FROM node:24-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -85,4 +85,3 @@ ENV PORT=3000
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 ENV HOSTNAME="0.0.0.0"
 CMD ["node", "server.js"]
-
