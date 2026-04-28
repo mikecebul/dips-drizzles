@@ -1,4 +1,4 @@
-name: mikecebul-website
+name: dips-drizzles
 
 services:
   mongo:

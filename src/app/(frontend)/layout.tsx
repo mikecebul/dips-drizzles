@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { DM_Sans, Geist } from 'next/font/google'
+import { Montserrat, Quicksand } from 'next/font/google'
 import type { ReactNode } from 'react'
 import { MarketingShell } from '@/components/marketing/marketing-pages'
 import { createMarketingMetadata } from '@/lib/marketing-metadata'
@@ -8,20 +8,20 @@ import { websiteContent } from '@/lib/website-content'
 import './globals.css'
 import Script from 'next/script'
 
-const geist = Geist({
+const quicksand = Quicksand({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-quicksand',
 })
 
-const dmSans = DM_Sans({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-montserrat',
 })
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
-      className={`${geist.variable} ${dmSans.variable}`}
+      className={`${quicksand.variable} ${montserrat.variable}`}
       data-scroll-behavior="smooth"
       lang="en"
     >
