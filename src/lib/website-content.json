@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "Mike Cebulski",
-    "legalName": "MIKECEBUL LLC",
-    "titleSuffix": " | Mike Cebulski",
-    "description": "Technical consulting, marketing websites, and automation support for Northern Michigan businesses that want modern systems with a human touch.",
+    "name": "Dips and Drizzles CHX",
+    "legalName": "Dips and Drizzles CHX",
+    "titleSuffix": " | Dips and Drizzles CHX",
+    "description": "Custom dipped treats, party packages, and sweet celebration orders in Charlevoix, Michigan.",
     "location": "Charlevoix, Michigan",
     "coordinates": "45.3181° N, 85.2584° W"
   },
@@ -14,25 +14,25 @@
     "profile": "/marketing/me-full.jpg"
   },
   "contact": {
-    "email": "me@mikecebul.com",
-    "phone": "(231) 373-6341",
-    "phoneHref": "12313736341",
-    "location": "Charlevoix, MI",
+    "email": "dipsanddrizzleschx@gmail.com",
+    "phone": "(231) 459-5841",
+    "phoneHref": "12314595841",
+    "location": "Charlevoix, MI 49720",
     "inquiryTypes": [
-      "Marketing website",
-      "Hybrid meeting solution",
-      "AI & automation consulting",
+      "Custom treat order",
+      "Party package",
+      "Menu question",
       "General question"
     ]
   },
   "socialLinks": [
     {
-      "label": "X",
-      "href": "https://x.com/MikeCebul"
+      "label": "Facebook",
+      "href": "https://www.facebook.com/"
     },
     {
-      "label": "LinkedIn",
-      "href": "https://www.linkedin.com/in/mikecebul/"
+      "label": "Instagram",
+      "href": "https://www.instagram.com/"
     }
   ],
   "headerNav": [
@@ -41,12 +41,8 @@
       "href": "/"
     },
     {
-      "label": "Services",
-      "href": "/services"
-    },
-    {
-      "label": "About",
-      "href": "/about"
+      "label": "Menu",
+      "href": "/menu"
     },
     {
       "label": "Contact",
@@ -54,29 +50,25 @@
     }
   ],
   "footer": {
-    "description": "Independent technical consulting for business websites, hybrid meeting systems, and automation in Northern Michigan.",
+    "description": "Handmade dipped treats with custom colors, drizzles, and sprinkles for celebrations in Charlevoix.",
     "servicesLinks": [
       {
-        "label": "Overview",
-        "href": "/services"
+        "label": "Menu",
+        "href": "/menu"
       },
       {
-        "label": "Business Websites",
-        "href": "/case-studies/websites"
+        "label": "Party Packages",
+        "href": "/menu#party-packages"
       },
       {
-        "label": "Hybrid Meeting Solutions",
-        "href": "/case-studies/hybrid-meeting-solutions"
+        "label": "Custom Orders",
+        "href": "/contact"
       }
     ],
     "companyLinks": [
       {
         "label": "Home",
         "href": "/"
-      },
-      {
-        "label": "About",
-        "href": "/about"
       },
       {
         "label": "Contact",
@@ -87,25 +79,25 @@
   "seo": {
     "defaultOgImage": "/marketing/login-og.jpg",
     "home": {
-      "title": "Mike Cebulski | Northern Michigan Technical Consulting",
-      "description": "Technical consulting, marketing websites, and automation support for Northern Michigan businesses that want modern systems with a human touch.",
+      "title": "Dips and Drizzles CHX | Custom Dipped Treats",
+      "description": "Custom dipped cake pops, strawberries, pretzel rods, Oreos, marshmallows, and party packages in Charlevoix, Michigan.",
       "keywords": [
-        "northern michigan technical consulting",
-        "charlevoix web design",
-        "small business automation",
-        "hybrid meeting systems",
-        "mike cebulski"
+        "dips and drizzles chx",
+        "charlevoix custom treats",
+        "cake pops charlevoix",
+        "party packages charlevoix",
+        "custom dipped desserts"
       ]
     },
     "services": {
-      "title": "Services | Mike Cebulski",
-      "description": "Consulting, websites, and hybrid meeting systems for Northern Michigan businesses that need practical technical execution.",
+      "title": "Menu | Dips and Drizzles CHX",
+      "description": "Pricing guide for standard treats, custom treats, sampler boxes, and party packages from Dips and Drizzles CHX.",
       "keywords": [
-        "technical consulting services",
-        "business website development",
-        "ai automation consulting",
-        "hybrid meeting solutions",
-        "northern michigan consultant"
+        "dips and drizzles menu",
+        "dips and drizzles pricing",
+        "charlevoix cake pops",
+        "custom dipped strawberries",
+        "party package treats"
       ]
     },
     "about": {
@@ -120,14 +112,14 @@
       ]
     },
     "contact": {
-      "title": "Contact | Mike Cebulski",
-      "description": "Get in touch about marketing websites, hybrid meeting solutions, and AI automation consulting.",
+      "title": "Contact | Dips and Drizzles CHX",
+      "description": "Contact Dips and Drizzles CHX to order custom dipped treats and party packages in Charlevoix, Michigan.",
       "keywords": [
-        "contact mike cebulski",
-        "charlevoix web consultant contact",
-        "automation consulting inquiry",
-        "hybrid meeting consultation",
-        "website project inquiry"
+        "contact dips and drizzles",
+        "order custom treats charlevoix",
+        "dips and drizzles chx contact",
+        "party treat order",
+        "charlevoix dessert order"
       ]
     },
     "blogIndex": {
@@ -167,12 +159,12 @@
     }
   },
   "home": {
-    "eyebrow": "Independent technology services",
-    "headline": "Elevate Your Business with Modern Tech.",
-    "highlight": "Business",
-    "body": "Mike Cebulski provides hands-on technical services across web systems, automation, AV, and hardware integration for businesses throughout Northern Michigan.",
-    "heroCaptionEyebrow": "Serving Northern Michigan",
-    "heroCaptionTitle": "Hands-on support for regional businesses.",
+    "eyebrow": "Handmade treats. Custom colors. Endless sweet possibilities.",
+    "headline": "Sweet Treats, Made Your Way.",
+    "highlight": "Treats",
+    "body": "Custom-dipped treats with colors, drizzles, and sprinkles to match any celebration.",
+    "heroCaptionEyebrow": "Made in Charlevoix",
+    "heroCaptionTitle": "Handmade sweets for birthdays, weddings, showers, and more.",
     "backgroundTitle": "Technical Mind. Strategic Vision.",
     "backgroundBody": [
       "Based in Charlevoix the Beautiful, I help businesses turn overwhelming tech challenges into simple, reliable systems. My approach is user experience first, so the complexity stays behind the scenes and the tools feel natural to use.",
@@ -219,7 +211,7 @@
         "Fast AI-assisted delivery"
       ],
       "ctaLabel": "View Portfolio",
-      "ctaHref": "/case-studies/websites"
+      "ctaHref": "/menu"
     },
     {
       "eyebrow": "AV Systems",
@@ -238,7 +230,7 @@
         "Support documentation"
       ],
       "ctaLabel": "Consult on Hardware",
-      "ctaHref": "/case-studies/hybrid-meeting-solutions"
+      "ctaHref": "/menu"
     }
   ],
   "servicePrinciples": [

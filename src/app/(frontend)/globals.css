@@ -160,6 +160,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-sans: var(--font-quicksand), Quicksand, Montserrat, system-ui, sans-serif;
   --font-heading: var(--font-montserrat), Quicksand, Montserrat, system-ui, sans-serif;
+  --font-script: var(--font-script), cursive;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-serif: Georgia, "Times New Roman", serif;
   --radius-sm: calc(var(--radius) - 4px);

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Montserrat, Quicksand } from 'next/font/google'
+import { Montserrat, Quicksand, WindSong } from 'next/font/google'
 import type { ReactNode } from 'react'
 import { MarketingShell } from '@/components/marketing/marketing-pages'
 import { createMarketingMetadata } from '@/lib/marketing-metadata'
@@ -18,10 +18,16 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
+const windSong = WindSong({
+  subsets: ['latin'],
+  variable: '--font-script',
+  weight: ['400'],
+})
+
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
-      className={`${quicksand.variable} ${montserrat.variable}`}
+      className={`${quicksand.variable} ${montserrat.variable} ${windSong.variable}`}
       data-scroll-behavior="smooth"
       lang="en"
     >
