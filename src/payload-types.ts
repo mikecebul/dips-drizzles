@@ -236,7 +236,6 @@ export interface Contact {
   name: string;
   email: string;
   phone: string;
-  inquiryType: string;
   message: string;
   updatedAt: string;
   createdAt: string;
@@ -417,7 +416,6 @@ export interface ContactsSelect<T extends boolean = true> {
   name?: T;
   email?: T;
   phone?: T;
-  inquiryType?: T;
   message?: T;
   updatedAt?: T;
   createdAt?: T;

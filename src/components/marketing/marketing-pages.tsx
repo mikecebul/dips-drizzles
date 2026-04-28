@@ -17,7 +17,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  Notebook,
   Palette,
   Phone,
   PartyPopper,
@@ -440,20 +439,35 @@ export function MarketingMenuPage() {
 export function MarketingContactPage() {
   return (
     <MarketingPageMain>
-      <section className="mx-auto max-w-[1220px] px-4 pt-6 sm:px-6 lg:px-12">
-        <MarketingEyebrow>{websiteContent.contactPage.eyebrow}</MarketingEyebrow>
-        <h1 className="mt-3 max-w-4xl font-heading text-5xl leading-[0.94] tracking-[-0.07em] sm:text-6xl">
-          {websiteContent.contactPage.title}
-        </h1>
+      <section className="mx-auto grid max-w-[1220px] gap-8 px-4 pt-8 sm:px-6 lg:grid-cols-[minmax(0,0.98fr)_minmax(360px,0.72fr)] lg:items-center lg:px-12">
+        <div>
+          <h1 className="max-w-4xl font-heading text-5xl leading-none font-black text-balance uppercase tracking-[0.04em] text-(--marketing-sky) sm:text-6xl">
+            {websiteContent.contactPage.title}
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-(--marketing-copy)">
+            {websiteContent.contactPage.formBody}
+          </p>
+        </div>
+        <div className="relative hidden lg:block">
+          <Image
+            priority
+            alt="Pastel dipped cake pops with pink and lavender drizzle"
+            className="h-auto w-full drop-shadow-[0_24px_42px_rgba(173,118,198,0.2)]"
+            src="/marketing/dips-drizzles/hero-cake-pops.png"
+            width={1693}
+            height={929}
+            sizes="34vw"
+          />
+        </div>
       </section>
 
-      <section className="mx-auto mt-16 grid max-w-[1220px] gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(320px,0.82fr)_minmax(0,1.18fr)] lg:px-12">
+      <section className="mx-auto mt-10 grid max-w-[1220px] gap-8 px-4 pb-14 sm:px-6 lg:grid-cols-[minmax(320px,0.82fr)_minmax(0,1.18fr)] lg:px-12">
         <div className="order-2 flex flex-col gap-8 lg:order-1">
-          <div className="rounded-[32px] border border-white/8 bg-[rgba(19,27,46,0.85)] p-8 shadow-[0_24px_70px_rgba(0,0,0,0.3)]">
-            <h2 className="font-heading text-3xl tracking-[-0.05em]">
+          <div className="rounded-[8px] border border-[#f0c6e1] bg-white p-7 shadow-[0_16px_42px_rgba(80,52,93,0.12)]">
+            <h2 className="font-heading text-2xl font-black uppercase tracking-[0.12em] text-(--marketing-sky)">
               {websiteContent.contactPage.detailsTitle}
             </h2>
-            <div className="mt-6 flex flex-col gap-5 text-sm leading-7 text-(--marketing-copy)">
+            <div className="mt-6 flex flex-col gap-5 text-sm leading-7">
               <ContactInfoItem
                 label="Location"
                 value={websiteContent.contact.location}
@@ -463,19 +477,19 @@ export function MarketingContactPage() {
                 label="Email"
                 value={
                   <a
-                    className="transition-colors hover:text-(--marketing-heading)"
+                    className="break-all transition-colors hover:text-(--marketing-gold-strong)"
                     href={`mailto:${websiteContent.contact.email}`}
                   >
                     {websiteContent.contact.email}
                   </a>
                 }
-                icon={<Notebook className="size-5" />}
+                icon={<Mail className="size-5" />}
               />
               <ContactInfoItem
                 label="Phone"
                 value={
                   <a
-                    className="transition-colors hover:text-(--marketing-heading)"
+                    className="transition-colors hover:text-(--marketing-gold-strong)"
                     href={`tel:${websiteContent.contact.phoneHref}`}
                   >
                     {websiteContent.contact.phone}
@@ -486,31 +500,35 @@ export function MarketingContactPage() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[32px] border border-white/8 bg-[rgba(19,27,46,0.85)]">
+          <div className="overflow-hidden rounded-[8px] border border-[#f0c6e1] bg-white shadow-[0_16px_42px_rgba(80,52,93,0.12)]">
             <Image
-              alt="Charlevoix harbor at dusk"
-              className="h-[280px] w-full object-cover"
-              src={websiteContent.images.hero}
-              width={1600}
-              height={1200}
+              alt="Custom dipped treats with pink drizzle and sprinkles"
+              className="h-[280px] w-full object-cover object-center"
+              src="/marketing/dips-drizzles/treats-collage.png"
+              width={1536}
+              height={1024}
               sizes="(min-width: 1024px) 30vw, 100vw"
             />
-            <div className="border-t border-white/8 px-6 py-5">
-              <p className="text-sm uppercase tracking-[0.28em] text-(--marketing-gold)">
-                Location
+            <div className="border-t border-[#f4d6e8] px-6 py-5">
+              <p className="font-(family-name:--font-script) text-4xl leading-none text-(--marketing-sky)">
+                Made in Charlevoix
               </p>
-              <p className="mt-2 text-base text-(--marketing-copy)">
-                {websiteContent.contact.location}
+              <p className="mt-2 text-base leading-7 text-(--marketing-copy)">
+                Custom colors, drizzles, sprinkles, and party packages for birthdays, showers,
+                weddings, graduations, and just-because sweets.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="order-1 rounded-[36px] border border-white/8 bg-[linear-gradient(180deg,rgba(19,27,46,0.98),rgba(12,18,33,0.98))] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.34)] sm:p-10 lg:order-2">
+        <div className="order-1 rounded-[8px] border border-[#f0c6e1] bg-[#fffafd] p-6 shadow-[0_20px_56px_rgba(80,52,93,0.16)] sm:p-8 lg:order-2">
           <div className="mb-8">
-            <h2 className="font-heading text-3xl tracking-[-0.05em]">
+            <h2 className="font-heading text-2xl font-black uppercase tracking-[0.12em] text-(--marketing-sky) sm:text-3xl">
               {websiteContent.contactPage.formTitle}
             </h2>
+            <p className="mt-3 text-base leading-7 text-(--marketing-copy)">
+              {websiteContent.contactPage.formBody}
+            </p>
           </div>
           <MarketingContactForm />
         </div>
@@ -761,11 +779,13 @@ function ContactInfoItem({
 }) {
   return (
     <div className="flex gap-4">
-      <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-(--marketing-panel-strong) text-(--marketing-gold)">
+      <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#fff0fa] text-(--marketing-sky)">
         {icon}
       </div>
       <div>
-        <p className="text-sm font-medium text-(--marketing-heading)">{label}</p>
+        <p className="text-xs font-black uppercase tracking-[0.14em] text-(--marketing-gold-strong)">
+          {label}
+        </p>
         <div className="mt-1 text-base text-(--marketing-copy)">{value}</div>
       </div>
     </div>

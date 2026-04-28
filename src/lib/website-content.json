@@ -17,13 +17,7 @@
     "email": "dipsanddrizzleschx@gmail.com",
     "phone": "(231) 459-5841",
     "phoneHref": "12314595841",
-    "location": "Charlevoix, MI 49720",
-    "inquiryTypes": [
-      "Custom treat order",
-      "Party package",
-      "Menu question",
-      "General question"
-    ]
+    "location": "Charlevoix, MI 49720"
   },
   "socialLinks": [
     {
@@ -304,11 +298,10 @@
     }
   ],
   "contactPage": {
-    "eyebrow": "Get in Touch",
-    "title": "Let's build the right solution for your business.",
-    "detailsTitle": "Contact Details",
-    "formTitle": "Tell me about the project.",
-    "formBody": "Share enough context to outline the goal, the timeline, and the friction you want to solve."
+    "title": "Let's make your next celebration extra sweet.",
+    "detailsTitle": "Sweet details",
+    "formTitle": "Tell us what you're dreaming up.",
+    "formBody": "Share the occasion, treat ideas, colors, quantity, and date so we can help shape the sweetest fit."
   },
   "blogPage": {
     "eyebrow": "Journal",

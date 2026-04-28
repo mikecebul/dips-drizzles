@@ -5,19 +5,10 @@ import { useForm } from '@tanstack/react-form'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
-import { Field, FieldDescription, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field'
+import { Field, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { contactFormSchema, formatPhoneNumber } from '@/lib/contact'
-import { websiteContent } from '@/lib/website-content'
 import { normalizeFieldErrors } from '@/forms/field-components/normalize-field-errors'
 
 export function MarketingContactForm() {
@@ -27,7 +18,6 @@ export function MarketingContactForm() {
   const form = useForm({
     defaultValues: {
       email: '',
-      inquiryType: '',
       message: '',
       name: '',
       phone: '',
@@ -55,7 +45,7 @@ export function MarketingContactForm() {
       }
 
       formApi.reset()
-      setSuccessMessage("I'll be getting back with you shortly.")
+      setSuccessMessage("We'll be getting back with you shortly.")
     },
   })
 
@@ -96,8 +86,8 @@ export function MarketingContactForm() {
                     }}
                     autoComplete="name"
                     aria-invalid={isInvalid}
-                    className="h-12 rounded-2xl border-white/10 bg-white/3 px-4 text-base text-(--marketing-heading) placeholder:text-(--marketing-copy-soft)"
-                    placeholder="John Doe"
+                    className="h-12 rounded-[8px] border-[#f0c6e1] bg-white px-4 text-base text-(--marketing-ink) shadow-sm placeholder:text-(--marketing-copy)"
+                    placeholder="Jane Sweet"
                   />
                   {isInvalid ? <FieldError errors={normalizedErrors} /> : null}
                 </Field>
@@ -127,8 +117,8 @@ export function MarketingContactForm() {
                     }}
                     autoComplete="email"
                     aria-invalid={isInvalid}
-                    className="h-12 rounded-2xl border-white/10 bg-white/3 px-4 text-base text-(--marketing-heading) placeholder:text-(--marketing-copy-soft)"
-                    placeholder="john@company.com"
+                    className="h-12 rounded-[8px] border-[#f0c6e1] bg-white px-4 text-base text-(--marketing-ink) shadow-sm placeholder:text-(--marketing-copy)"
+                    placeholder="jane@email.com"
                   />
                   {isInvalid ? <FieldError errors={normalizedErrors} /> : null}
                 </Field>
@@ -162,56 +152,9 @@ export function MarketingContactForm() {
                   }}
                   autoComplete="tel"
                   aria-invalid={isInvalid}
-                  className="h-12 rounded-2xl border-white/10 bg-white/3 px-4 text-base text-(--marketing-heading) placeholder:text-(--marketing-copy-soft)"
+                  className="h-12 rounded-[8px] border-[#f0c6e1] bg-white px-4 text-base text-(--marketing-ink) shadow-sm placeholder:text-(--marketing-copy)"
                   placeholder="(555) 123-4567"
                 />
-                {isInvalid ? <FieldError errors={normalizedErrors} /> : null}
-              </Field>
-            )
-          }}
-        </form.Field>
-
-        <form.Field name="inquiryType">
-          {(field) => {
-            const normalizedErrors = normalizeFieldErrors(field.state.meta.errors as unknown[])
-            const isInvalid =
-              (field.state.meta.isTouched || form.state.submissionAttempts > 0) &&
-              !field.state.meta.isValid
-
-            return (
-              <Field data-invalid={isInvalid || undefined}>
-                <FieldLabel htmlFor="contact-inquiry-type">Inquiry Type</FieldLabel>
-                <Select
-                  name={field.name}
-                  value={field.state.value}
-                  onValueChange={(value) => {
-                    setSubmissionError(undefined)
-                    field.handleChange(value ?? '')
-                  }}
-                >
-                  <SelectTrigger
-                    id="contact-inquiry-type"
-                    aria-invalid={isInvalid}
-                    className="h-14 w-full rounded-2xl border-white/10 bg-white/3 px-4 text-base text-(--marketing-heading) data-placeholder:text-(--marketing-copy-soft)"
-                  >
-                    <SelectValue placeholder="Select the project type" />
-                  </SelectTrigger>
-                  <SelectContent
-                    align="start"
-                    className="rounded-2xl border border-white/10 bg-(--marketing-panel) text-(--marketing-heading)"
-                  >
-                    <SelectGroup>
-                      {websiteContent.contact.inquiryTypes.map((inquiryType) => (
-                        <SelectItem key={inquiryType} value={inquiryType}>
-                          {inquiryType}
-                        </SelectItem>
-                      ))}
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-                <FieldDescription>
-                  Pick the closest fit so the follow-up can stay focused.
-                </FieldDescription>
                 {isInvalid ? <FieldError errors={normalizedErrors} /> : null}
               </Field>
             )
@@ -238,8 +181,8 @@ export function MarketingContactForm() {
                     field.handleChange(event.target.value)
                   }}
                   aria-invalid={isInvalid}
-                  className="min-h-40 rounded-3xl border-white/10 bg-white/3 px-4 py-4 text-base text-(--marketing-heading) placeholder:text-(--marketing-copy-soft)"
-                  placeholder="Tell me about your project, timeline, or the friction you want to solve."
+                  className="min-h-40 rounded-[8px] border-[#f0c6e1] bg-white px-4 py-4 text-base text-(--marketing-ink) shadow-sm placeholder:text-(--marketing-copy)"
+                  placeholder="Tell us the occasion, date, treats, colors, drizzle style, sprinkles, and any theme details."
                 />
                 {isInvalid ? <FieldError errors={normalizedErrors} /> : null}
               </Field>
@@ -255,10 +198,10 @@ export function MarketingContactForm() {
           {(isSubmitting) => (
             <Button
               type="submit"
-              className="h-12 rounded-full px-5 text-sm font-semibold shadow-[0_18px_40px_rgba(0,0,0,0.25)] [--primary:var(--marketing-gold)] [--primary-foreground:var(--marketing-gold-foreground)]"
+              className="h-12 rounded-[6px] px-6 text-xs font-black uppercase tracking-[0.1em] shadow-none [--primary:var(--marketing-gold-strong)] [--primary-foreground:var(--marketing-gold-foreground)]"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+              {isSubmitting ? 'Sending...' : 'Send Order Inquiry'}
               <ArrowRight data-icon="inline-end" />
             </Button>
           )}
@@ -270,9 +213,9 @@ export function MarketingContactForm() {
 
 function MarketingContactThankYou({ message }: { message: string }) {
   return (
-    <div className="flex min-h-[420px] flex-col justify-center rounded-[32px] border border-white/8 bg-white/4 px-6 py-10 text-center shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:px-10">
-      <CheckCircle2 className="mx-auto size-14 text-(--marketing-gold)" />
-      <h3 className="mt-6 font-heading text-4xl tracking-[-0.05em] text-(--marketing-heading)">
+    <div className="flex min-h-[420px] flex-col justify-center rounded-[8px] border border-[#f0c6e1] bg-white px-6 py-10 text-center shadow-[0_16px_42px_rgba(80,52,93,0.12)] sm:px-10">
+      <CheckCircle2 className="mx-auto size-14 text-(--marketing-sky)" />
+      <h3 className="mt-6 font-heading text-4xl font-black uppercase tracking-[0.08em] text-(--marketing-sky)">
         Thank you
       </h3>
       <p className="mt-4 text-base leading-8 text-(--marketing-copy)">

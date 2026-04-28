@@ -4,7 +4,6 @@ import EmailShell from './components/EmailShell'
 import { emailTheme } from './components/theme'
 
 type ContactEmailProps = {
-  inquiryType: string
   message: string
   name: string
   phone: string
@@ -19,7 +18,6 @@ const lineStyle = {
 } as const
 
 export default function ContactEmail({
-  inquiryType,
   message,
   name,
   phone,
@@ -54,9 +52,6 @@ export default function ContactEmail({
         </Text>
         <Text style={lineStyle}>
           <strong style={{ color: emailTheme.siteName }}>Phone:</strong> {phone}
-        </Text>
-        <Text style={lineStyle}>
-          <strong style={{ color: emailTheme.siteName }}>Inquiry type:</strong> {inquiryType}
         </Text>
       </Section>
       <Section

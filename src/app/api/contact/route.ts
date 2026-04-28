@@ -39,11 +39,10 @@ export async function POST(request: Request) {
       overrideAccess: true,
     })
 
-    const subject = `New contact inquiry: ${data.inquiryType} from ${data.name}`
+    const subject = `New contact inquiry from ${data.name}`
     const companyName = websiteContent.site.name
     const html = await render(
       React.createElement(ContactEmail, {
-        inquiryType: data.inquiryType,
         message: data.message,
         name: data.name,
         phone: data.phone,
@@ -61,7 +60,6 @@ export async function POST(request: Request) {
         `Name: ${data.name}`,
         `Email: ${data.email}`,
         `Phone: ${data.phone}`,
-        `Inquiry Type: ${data.inquiryType}`,
         '',
         data.message,
       ].join('\n'),

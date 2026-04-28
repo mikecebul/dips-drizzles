@@ -47,7 +47,6 @@ const websiteContentSchema = z.object({
   }),
   contact: z.object({
     email: z.string().email(),
-    inquiryTypes: z.array(z.string()).min(1),
     location: z.string(),
     phone: z.string(),
     phoneHref: z.string(),
@@ -128,7 +127,6 @@ const websiteContentSchema = z.object({
   ),
   contactPage: z.object({
     detailsTitle: z.string(),
-    eyebrow: z.string(),
     formBody: z.string(),
     formTitle: z.string(),
     title: z.string(),
